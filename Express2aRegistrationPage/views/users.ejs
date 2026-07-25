@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+</head>
+<body>
+
+<h1>User Details</h1>
+
+<% if(users.length === 0){ %>
+
+    <h3>No users available.</h3>
+
+<% } else { %>
+
+    <h3>Total Users: <%= users.length %></h3>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+
+        <% users.forEach(function(user){ %>
+
+        <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.age %></td>
+        </tr>
+
+        <% }); %>
+
+    </table>
+
+<% } %>
+
+</body>
+</html>
